@@ -1,4 +1,4 @@
-//Class コマンドライン
+
 
 //constructor
 var CCommandLine = function(command){
