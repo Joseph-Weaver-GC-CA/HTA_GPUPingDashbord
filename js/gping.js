@@ -9,9 +9,21 @@
 		
 		dom.setValueId('kekka', ping.addArg(form1.ipaddr.value).addOpt("n").addArg(loops).addOpt("l").addArg(pacsize).execute().resultALL());
 	};
+	function add(){
+		var loops = dom.radioValueChecked('rd');
+		var pacsize = dom.valueId('pacsize');
+		
+		var ping = new CCommandLine("ping");
+		
+		dom.setValueId('kekka', ping.addArg(form1.ipaddr.value).addOpt("n").addArg(loops).addOpt("l").addArg(pacsize).execute().resultALL());
+	};
 	function init(){
 		//set event handler
 		dom.addListener(dom.Id('go_ping'), "click" ,go_ping);
+	}
+	function init(){
+		//set event handler
+		dom.addListener(dom.Id('test'), "click" ,add);
 	}
 	
 	//initialize
